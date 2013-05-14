@@ -129,7 +129,7 @@ void write_pid(char *filename, pid_t pid)
         // logging not enabled yet
         exit(EXIT_FAILURE);
     }
-    fprintf(fp, "%d", pid);
+    fprintf(fp, "%d\n", pid);
 
     fclose(fp);
 }
