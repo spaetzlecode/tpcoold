@@ -5,7 +5,7 @@ set -e
 # Must be a valid filename
 NAME=tpcool
 PIDFILE=/var/run/$NAME.pid
-DAEMON=/usr/local/bin/tpcoold
+DAEMON=/usr/local/sbin/tpcoold
 DAEMON_OPTS=""
 
 export PATH="${PATH:+$PATH:}/usr/sbin:/sbin"

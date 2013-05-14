@@ -15,5 +15,7 @@ Installation
 On Debian-based systems, this should do the trick:
     make
     sudo make install
+    sudo update-rc.d tpcool defaults
+    
     reboot
 
