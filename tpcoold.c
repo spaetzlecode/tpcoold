@@ -89,7 +89,8 @@ void daemon_loop()
 int read_temp(char *filename)
 {
     FILE * fp = fopen(filename,"r");
-    int temp = -1;
+    int temp = 0;
+    bool valid = false;
 
     if (0==fp) {
         syslog(LOG_ERR, "Failed to open %s", filename);
@@ -100,9 +101,17 @@ int read_temp(char *filename)
     while (fgets(buf,sizeof(buf),fp)) {
         // only first temperature in the list
         // is relevant for me (on TP410) - YMMV
-        if (sscanf(buf, "temperature: %d", temp)) break;
+        if (1==sscanf(buf, "temperatures: %d", &temp)) {
+            valid=true;
+            break;
+        }
     }
     fclose(fp);
+
+
+    if (!valid) {
+        syslog(LOG_ERR, "Could not read temperature from %s", filename);
+    }
 
     return temp;
 }
