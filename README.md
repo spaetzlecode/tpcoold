@@ -1,4 +1,4 @@
-== Update (2015): Do not use this!
+# Update (2015): Do not use this!
 
 I can no longer recommend using this hack. 
 
@@ -15,7 +15,7 @@ I found out that thinkfan can actually be configured to run "full-speed" setting
     (126,	65,	32767)
 
 
-== Previous description
+# Previous description
 
 Stupid fan control for thinkpad (similar to thinkfan)
 ==============
