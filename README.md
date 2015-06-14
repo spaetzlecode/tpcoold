@@ -2,7 +2,7 @@
 
 I can no longer recommend using this hack. 
 
-I found out that thinkfan can actually be configured to run "full-speed" setting - use the numerical value 126 for that level. Here's my thinkfan.conf:
+I found out that thinkfan can actually be configured to run "full-speed" setting - use the numerical value 126 for that level. Here's my thinkfan.conf (again, use at your own risk):
 
     (0,	0,	55)
     (1,	48,	60)
